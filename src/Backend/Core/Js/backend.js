@@ -2053,7 +2053,9 @@ jsBackend.tableSequenceByDragAndDrop = {
         }
 
         jsBackend.messages.add('danger', textStatus)
-        $table.sortable('cancel')
+
+        // refresh page
+        location.reload()
 
         if (jsBackend.debug) {
           window.alert(textStatus)
